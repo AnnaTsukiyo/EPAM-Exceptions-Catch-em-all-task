@@ -96,8 +96,9 @@ class CatchEmAllTest {
             CatchEmAll.main(new String[0]);
             fail("main must throw an exception");
         } catch (Exception e) {
-            assertEquals(UnsupportedEncodingException.class, e.getClass());
-            assertEquals(exception, e);
+            assertEquals(IllegalArgumentException.class, e.getClass());
+            assertEquals(exception, e.getCause());
+            assertEquals("Resource error", e.getMessage());
         }
     }
 
