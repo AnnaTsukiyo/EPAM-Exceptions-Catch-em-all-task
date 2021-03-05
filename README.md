@@ -2,7 +2,7 @@
 
 Handle a call to a risky method in the main method in [CatchEmAll](src/main/java/com/rpam/rd/autotasks/CatchEmAll.java) that can throw different types of exceptions.
 
-Some types of exceptions should be handled, some other - wrapped and rethrown, some should just be not handled.
+Please, note that some types of exceptions should be handled, while others – shouldn’t.
 
 Details:
 
