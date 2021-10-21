@@ -1,6 +1,6 @@
 # Catch'em all
 
-The purpose of this exercise is to train you to work exceptions, to handle them in particular.
+The purpose of this exercise is to train you to work with exceptions, to handle them in particular.
 
 Estimated workload of this exercise is _30 min_.
 
