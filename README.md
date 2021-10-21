@@ -1,6 +1,12 @@
 # Catch'em all
 
-Handle a call to a risky method in the main method in [CatchEmAll](src/main/java/com/rpam/rd/autotasks/CatchEmAll.java) that can throw different types of exceptions.
+The purpose of this exercise is to train you to work exceptions, to raise them in particular.
+
+Estimated workload of this exercise is _30 min_.
+
+### Description
+Please, implement the main method in [CatchEmAll](src/main/java/com/rpam/rd/autotasks/CatchEmAll.java) class.
+It must handle a call to a risky method that can throw different types of exceptions.
 
 Please, note that some types of exceptions should be handled, while others – shouldn’t.
 
