@@ -1,29 +1,31 @@
 package com.rpam.rd.autotasks;
 
 import java.io.FileNotFoundException;
-
-import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class CatchEmAll {
-    //You may set another exception in this field;
     static Exception exception = new FileNotFoundException();
+    static Exception exception2 = new IllegalArgumentException();
+    static Exception exception3 = new IOException();
 
-    public static void riskyMethod() throws Exception {
+    public static void riskyMethod() throws IllegalArgumentException, IOException {
         throw new IllegalArgumentException();
     }
-
-    public static void main(String[] args) throws Exception {
+    //
+//Какое исключение брошено?	Как с ним обращаться?
+//    IOException	Обернуть в IllegalArgumentException с сообщением "Resource error" и выбросить
+//    FileNotFoundException	Обернуть в IllegalArgumentException с сообщением "Resource is missing" и выбросить
+//    ArithmeticException or NumberFormatException	Печатать сообщение о сгенерированном исключении в System.err. Ничего не генерировать
+//    Любое другое исключение	Не перехватывать
+    public static void main(String[] args) throws FileNotFoundException, IOException,IllegalArgumentException {
         try {
             riskyMethod();
-        } catch (FileNotFoundException exception1) {
-            throw new IllegalArgumentException("Resource is missing");
-        } catch (IOException exception) {
+        } catch (FileNotFoundException exception1){
+            throw  new IllegalArgumentException("Resource is missing");
+        } catch (IOException exception){
             throw new IllegalArgumentException("Resource error");
-        } catch (ArithmeticException exception3) {
-            System.out.println("Exception in System.err");
-        } catch (NumberFormatException exception4) {
-            System.out.println("Exception in System.err");
+        } catch (ArithmeticException | NumberFormatException exception3){
+            exception3.printStackTrace();
         }
     }
 }
